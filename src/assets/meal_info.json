@@ -1,0 +1,308 @@
+[
+    {
+      "meal_id": 1885,
+      "category": "Beverages",
+      "cuisine": "Thai",
+      "ingredient": "Lemongrass"
+    },
+    {
+      "meal_id": 1993,
+      "category": "Beverages",
+      "cuisine": "Thai",
+      "ingredient": "Coconut Milk"
+    },
+    {
+      "meal_id": 2539,
+      "category": "Beverages",
+      "cuisine": "Thai",
+      "ingredient": "Thai Tea Leaves"
+    },
+    {
+      "meal_id": 1248,
+      "category": "Beverages",
+      "cuisine": "Indian",
+      "ingredient": "Chai Masala"
+    },
+    {
+      "meal_id": 2631,
+      "category": "Beverages",
+      "cuisine": "Indian",
+      "ingredient": "Lassi"
+    },
+    {
+      "meal_id": 1311,
+      "category": "Extras",
+      "cuisine": "Thai",
+      "ingredient": "Spring Roll Wrapper"
+    },
+    {
+      "meal_id": 1062,
+      "category": "Beverages",
+      "cuisine": "Italian",
+      "ingredient": "Espresso"
+    },
+    {
+      "meal_id": 1778,
+      "category": "Beverages",
+      "cuisine": "Italian",
+      "ingredient": "Amaretto"
+    },
+    {
+      "meal_id": 1803,
+      "category": "Extras",
+      "cuisine": "Thai",
+      "ingredient": "Tofu"
+    },
+    {
+      "meal_id": 1198,
+      "category": "Extras",
+      "cuisine": "Thai",
+      "ingredient": "Peanut Sauce"
+    },
+    {
+      "meal_id": 2707,
+      "category": "Beverages",
+      "cuisine": "Italian",
+      "ingredient": "Limoncello"
+    },
+    {
+      "meal_id": 1847,
+      "category": "Soup",
+      "cuisine": "Thai",
+      "ingredient": "Tom Yum Paste"
+    },
+    {
+      "meal_id": 1438,
+      "category": "Soup",
+      "cuisine": "Thai",
+      "ingredient": "Galangal"
+    },
+    {
+      "meal_id": 2494,
+      "category": "Soup",
+      "cuisine": "Thai",
+      "ingredient": "Kaffir Lime Leaves"
+    },
+    {
+      "meal_id": 2760,
+      "category": "Other Snacks",
+      "cuisine": "Thai",
+      "ingredient": "Rice Paper"
+    },
+    {
+      "meal_id": 2490,
+      "category": "Salad",
+      "cuisine": "Italian",
+      "ingredient": "Olive Oil"
+    },
+    {
+      "meal_id": 1109,
+      "category": "Rice Bowl",
+      "cuisine": "Indian",
+      "ingredient": "Basmati Rice"
+    },
+    {
+      "meal_id": 2290,
+      "category": "Rice Bowl",
+      "cuisine": "Indian",
+      "ingredient": "Garam Masala"
+    },
+    {
+      "meal_id": 1525,
+      "category": "Other Snacks",
+      "cuisine": "Thai",
+      "ingredient": "Rice Vermicelli"
+    },
+    {
+      "meal_id": 2704,
+      "category": "Other Snacks",
+      "cuisine": "Thai",
+      "ingredient": "Sweet Chili Sauce"
+    },
+    {
+      "meal_id": 1878,
+      "category": "Starters",
+      "cuisine": "Thai",
+      "ingredient": "Spring Onions"
+    },
+    {
+      "meal_id": 2640,
+      "category": "Starters",
+      "cuisine": "Thai",
+      "ingredient": "Fish Sauce"
+    },
+    {
+      "meal_id": 2577,
+      "category": "Starters",
+      "cuisine": "Thai",
+      "ingredient": "Lemongrass"
+    },
+    {
+      "meal_id": 1754,
+      "category": "Sandwich",
+      "cuisine": "Italian",
+      "ingredient": "Ciabatta Bread"
+    },
+    {
+      "meal_id": 1971,
+      "category": "Sandwich",
+      "cuisine": "Italian",
+      "ingredient": "Prosciutto"
+    },
+    {
+      "meal_id": 2306,
+      "category": "Pasta",
+      "cuisine": "Italian",
+      "ingredient": "Penne Pasta"
+    },
+    {
+      "meal_id": 2139,
+      "category": "Beverages",
+      "cuisine": "Indian",
+      "ingredient": "Mango Lassi"
+    },
+    {
+      "meal_id": 2826,
+      "category": "Sandwich",
+      "cuisine": "Italian",
+      "ingredient": "Mozzarella Cheese"
+    },
+    {
+      "meal_id": 2664,
+      "category": "Salad",
+      "cuisine": "Italian",
+      "ingredient": "Balsamic Vinegar"
+    },
+    {
+      "meal_id": 2569,
+      "category": "Salad",
+      "cuisine": "Italian",
+      "ingredient": "Mixed Greens"
+    },
+    {
+      "meal_id": 1230,
+      "category": "Beverages",
+      "cuisine": "Continental",
+      "ingredient": "Mineral Water"
+    },
+    {
+      "meal_id": 1207,
+      "category": "Beverages",
+      "cuisine": "Continental",
+      "ingredient": "Sparkling Water"
+    },
+    {
+      "meal_id": 2322,
+      "category": "Beverages",
+      "cuisine": "Continental",
+      "ingredient": "Cola"
+    },
+    {
+      "meal_id": 2492,
+      "category": "Dessert",
+      "cuisine": "Indian",
+      "ingredient": "Gulab Jamun"
+    },
+    {
+      "meal_id": 1216,
+      "category": "Pasta",
+      "cuisine": "Italian",
+      "ingredient": "Alfredo Sauce"
+    },
+    {
+      "meal_id": 1727,
+      "category": "Rice Bowl",
+      "cuisine": "Indian",
+      "ingredient": "Chicken Tikka"
+    },
+    {
+      "meal_id": 1902,
+      "category": "Biryani",
+      "cuisine": "Indian",
+      "ingredient": "Basmati Rice"
+    },
+    {
+      "meal_id": 1247,
+      "category": "Biryani",
+      "cuisine": "Indian",
+      "ingredient": "Saffron"
+    },
+    {
+      "meal_id": 2304,
+      "category": "Dessert",
+      "cuisine": "Indian",
+      "ingredient": "Rasgulla"
+    },
+    {
+      "meal_id": 1543,
+      "category": "Dessert",
+      "cuisine": "Indian",
+      "ingredient": "Kheer"
+    },
+    {
+      "meal_id": 1770,
+      "category": "Biryani",
+      "cuisine": "Indian",
+      "ingredient": "Lamb"
+    },
+    {
+      "meal_id": 2126,
+      "category": "Pasta",
+      "cuisine": "Italian",
+      "ingredient": "Marinara Sauce"
+    },
+    {
+      "meal_id": 1558,
+      "category": "Pizza",
+      "cuisine": "Continental",
+      "ingredient": "Pizza Dough"
+    },
+    {
+      "meal_id": 2581,
+      "category": "Pizza",
+      "cuisine": "Continental",
+      "ingredient": "Tomato Sauce"
+    },
+    {
+      "meal_id": 1962,
+      "category": "Pizza",
+      "cuisine": "Continental",
+      "ingredient": "Mozzarella Cheese"
+    },
+    {
+      "meal_id": 1571,
+      "category": "Fish",
+      "cuisine": "Continental",
+      "ingredient": "Salmon"
+    },
+    {
+      "meal_id": 2956,
+      "category": "Fish",
+      "cuisine": "Continental",
+      "ingredient": "Dill"
+    },
+    {
+      "meal_id": 2104,
+      "category": "Fish",
+      "cuisine": "Continental",
+      "ingredient": "Lemon"
+    },
+    {
+      "meal_id": 2444,
+      "category": "Seafood",
+      "cuisine": "Continental",
+      "ingredient": "Shrimp"
+    },
+    {
+      "meal_id": 2867,
+      "category": "Seafood",
+      "cuisine": "Continental",
+      "ingredient": "Mussels"
+    },
+    {
+      "meal_id": 1445,
+      "category": "Seafood",
+      "cuisine": "Continental",
+      "ingredient": "White Wine"
+    }
+  ]

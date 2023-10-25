@@ -14,7 +14,8 @@ import circles_img from '../../assets/blue_circles.svg';
 import circles_img_2 from '../../assets/blue_circles_2.svg';
 import navega_img from '../../assets/navega_img.png';
 import ahorra_dinero_img from '../../assets/ahorra_img.png';
-import ahorra_tiempo_img from '../../assets/ahorra_img.png';
+import ahorra_dinero from '../../assets/ahorra_dinero.png';
+import lower_emissions from '../../assets/lower_emissions.png';
 import { Container } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import { FormattedMessage } from 'react-intl';
@@ -81,7 +82,7 @@ function Landingpage() {
                 <Row className="cards_container">
                     <Col>
                         <Card className="card_pink">
-                            <Card.Img variant="top" src={navega_img} className="card_img" />
+                            <Card.Img variant="top" src={ahorra_dinero} className="card_img" />
                             <Card.Body>
                                 <Row>
                                     <Col>
@@ -115,7 +116,7 @@ function Landingpage() {
                     </Col>
                     <Col>
                         <Card className="card_pink">
-                            <Card.Img variant="top" src={ahorra_tiempo_img} className="card_img" />
+                            <Card.Img variant="top" src={lower_emissions} className="card_img" />
                             <Card.Body>
                                 <Row>
                                     <Col>

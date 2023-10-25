@@ -3,7 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import './OrderCategory.css';
+import mealInfo from '../assets/meal_info.json';
+import axios from 'axios'; // Import Axios
 
 function OrderCategory() {
   const [order, setOrder] = useState([]);
@@ -11,12 +12,68 @@ function OrderCategory() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('YOUR_BACKEND_API_ENDPOINT_HERE');
-      if (!response.ok) {
-        throw new Error(`Request failed: ${response.status}`);
+      const ingredients = [
+        "Spring Onions", "Salmon", "Lemon", "Shrimp"
+        // "Salmon", "Mozzarella Cheese", "Tomato Sauce",
+        // "Lamb", "Mineral Water", "Balsamic Vinegar", "Tofu"
+      ];
+
+      const mealIds = {};
+
+      for (const ingredient of ingredients) {
+        const meal = mealInfo.find(item => item.ingredient === ingredient);
+        if (meal) {
+          mealIds[ingredient] = meal.meal_id;
+        }
       }
-      const data = await response.json();
-      setOrder(data);
+
+      const orderData = [];
+
+      for (const ingredient of ingredients) {
+        const attr_4 = mealIds[ingredient];
+        const requestBody = {
+          data: {
+            req_data: [{
+              attr_1: 100000,
+              attr_2: 10,
+              attr_3: 55,
+              attr_4,
+              attr_5: 200,
+              attr_6: 200,
+              attr_7: 1,
+              attr_8: 1
+            }]
+          }
+        };
+
+        // Replace the fetch call with Axios
+        console.log(requestBody);
+        const response = await axios.post('http://94.74.67.209:5000/https://01516f373f434921a874bf502a986a58.apig.ap-southeast-3.huaweicloudapis.com/v1/infers/83ad41f3-3161-4430-ba2c-2db270e9cc91', requestBody, {
+          headers: {
+            'X-Apig-AppCode': '8256069e07fd48b8b3589bab45d05b2df06a3e3e392c4f13b521b02617050779',
+          }
+        });
+
+        console.log(response);
+
+        if (response.status !== 200) {
+          throw new Error(`Request failed: ${response.status}`);
+        }
+
+        const result = response.data;
+        const amount = result.data.resp_data[0].predict - 200;
+
+        const meal = mealInfo.find(item => item.ingredient === ingredient);
+
+        orderData.push({
+          Amount: (result.data.resp_data[0].predict / 100).toFixed(2),
+          distributor: meal.category + ' Distributor',
+          ingredient,
+          stock: (amount / 100).toFixed(2),
+        });
+      }
+
+      setOrder(orderData);
     } catch (error) {
       console.log(error.message);
     }
@@ -24,32 +81,6 @@ function OrderCategory() {
 
   useEffect(() => {
     fetchData();
-    setOrder([
-      {
-        id: 1,
-        ingredient: 'Ingredient 1',
-        stock: 10,
-        distributor: 'Distributor 1',
-        Amount: 1,
-        selected: false,
-      },
-      {
-        id: 2,
-        ingredient: 'Ingredient 2',
-        stock: 20,
-        distributor: 'Distributor 2',
-        Amount: 2,
-        selected: false,
-      },
-      {
-        id: 3,
-        ingredient: 'Ingredient 3',
-        stock: 30,
-        distributor: 'Distributor 3',
-        Amount: 3,
-        selected: false,
-      },
-    ]);
   }, []);
 
   const handleCheckAll = (e) => {
@@ -89,14 +120,14 @@ function OrderCategory() {
           </tr>
         </thead>
         <tbody>
-          {order.map((item) => (
-            <tr key={item.id}>
+          {order.map((item, index) => (
+            <tr key={index}>
               <td>
                 <Form.Check
                   type="checkbox"
-                  id={`checkbox-${item.id}`}
+                  id={`checkbox-${index}`}
                   checked={item.selected}
-                  onChange={() => handleCheckboxChange(item.id)}
+                  onChange={() => handleCheckboxChange(index)}
                 />
               </td>
               <td>{item.ingredient}</td>
