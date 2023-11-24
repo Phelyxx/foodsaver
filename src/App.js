@@ -5,8 +5,8 @@ import Landingpage from './components/landingpage/Landingpage';
 import OrderCategory from './components/OrderCategory';
 import Page_end from './components/Page_end';
 import Header from './components/Header';
+import Dashboard from './components/Dashboard';
 import { useState } from "react";
-
 
 function App() {
 
@@ -24,6 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landingpage />} />
           <Route path="/order" element={<OrderCategory />} />
+          <Route path="/dashboard" element={<Dashboard/>} />
         </Routes>
         <Page_end />
       </BrowserRouter>

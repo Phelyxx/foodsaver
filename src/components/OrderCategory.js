@@ -13,7 +13,7 @@ function OrderCategory() {
   const fetchData = async () => {
     try {
       const ingredients = [
-        "Spring Onions", "Salmon", "Lemon", "Shrimp"
+        "Spring Onions", "Ciabatta Bread", "Pizza Dough", "Mozzarella Cheese", "Lemon"
         // "Salmon", "Mozzarella Cheese", "Tomato Sauce",
         // "Lamb", "Mineral Water", "Balsamic Vinegar", "Tofu"
       ];
