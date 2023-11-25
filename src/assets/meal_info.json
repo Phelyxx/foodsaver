@@ -121,7 +121,7 @@
     },
     {
       "meal_id": 1878,
-      "category": "Starters",
+      "category": "Vegetables",
       "cuisine": "Thai",
       "ingredient": "Spring Onions"
     },
@@ -139,7 +139,7 @@
     },
     {
       "meal_id": 1754,
-      "category": "Sandwich",
+      "category": "Bread",
       "cuisine": "Italian",
       "ingredient": "Ciabatta Bread"
     },
@@ -163,7 +163,7 @@
     },
     {
       "meal_id": 2826,
-      "category": "Sandwich",
+      "category": "Dairy",
       "cuisine": "Italian",
       "ingredient": "Mozzarella Cheese"
     },
@@ -283,7 +283,7 @@
     },
     {
       "meal_id": 2104,
-      "category": "Fish",
+      "category": "Fruit",
       "cuisine": "Continental",
       "ingredient": "Lemon"
     },

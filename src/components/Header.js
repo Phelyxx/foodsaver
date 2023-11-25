@@ -43,7 +43,7 @@ function DropDownComponent(props) {
           <span className="badge" id='lblCartCount'></span>
         </Dropdown.Toggle>
         <Dropdown.Menu>
-          <Dropdown.Item href="/order">Order</Dropdown.Item>
+          <Dropdown.Item href="/order">Order Prediction</Dropdown.Item>
           <Dropdown.Item href="/dashboard">Dashboard</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>

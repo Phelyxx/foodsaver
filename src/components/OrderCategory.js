@@ -3,14 +3,19 @@ import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Spinner from 'react-bootstrap/Spinner'; // Import Spinner
 import mealInfo from '../assets/meal_info.json';
 import axios from 'axios'; // Import Axios
 
 function OrderCategory() {
   const [order, setOrder] = useState([]);
-  const [selectAll, setSelectAll] = useState(false);
+  const [loading, setLoading] = useState(false); // Add loading state
+  const [orderStatus, setOrderStatus] = useState('idle'); // Add orderStatus state
+
+
 
   const fetchData = async () => {
+    setLoading(true); // Set loading state to true
     try {
       const ingredients = [
         "Spring Onions", "Ciabatta Bread", "Pizza Dough", "Mozzarella Cheese", "Lemon"
@@ -70,6 +75,7 @@ function OrderCategory() {
           distributor: meal.category + ' Distributor',
           ingredient,
           stock: (amount / 100).toFixed(2),
+          selected: true, // Add this line
         });
       }
 
@@ -77,37 +83,49 @@ function OrderCategory() {
     } catch (error) {
       console.log(error.message);
     }
+    setLoading(false); // Set loading state to false
   };
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  const handleCheckAll = (e) => {
-    setSelectAll(e.target.checked);
-  };
-
-  const handleCheckboxChange = (id) => {
+  const handleCheckboxChange = (index) => {
     setOrder((prevOrder) => {
-      return prevOrder.map((item) =>
-        item.id === id ? { ...item, selected: !item.selected } : item
-      );
+      const newOrder = [...prevOrder];
+      newOrder[index].selected = !newOrder[index].selected;
+      return newOrder;
     });
   };
-
   const handleOrderClick = () => {
     const selectedItems = order.filter((item) => item.selected);
-    // Send the selected items to the backend for ordering
     console.log(selectedItems);
+
+    setOrderStatus('processing'); // Set orderStatus to 'processing'
+
+    const waitTime = Math.floor(Math.random() * 2000) + 1000; // Random time between 1 and 3 seconds
+    setTimeout(() => {
+      setOrderStatus('completed'); // Set orderStatus to 'completed' after the wait
+    }, waitTime);
   };
+
 
   const handleCancelClick = () => {
     setOrder([]);
   };
 
   return (
-    <Container className="mt-2 mb-5">
-      <Table striped bordered hover className="container-table">
+    <Container className="mt-2 mb-5" style={{ fontSize: '1.5rem'}}>
+    {loading ? ( // If loading is true, render Spinner
+      <Container className="mt-2 mb-5 d-flex justify-content-center align-items-center flex-column" >
+              <h1 style={{ fontSize: '2rem', marginBottom: '2rem'}}>Predicting...</h1>
+      <Spinner animation="border" role="status" style={{ width: '20rem', height: '20rem', color: 'green' }}>
+        <span className="sr-only">Loading...</span>
+      </Spinner>
+      </Container>
+          ) : ( 
+      <>
+        <Table striped bordered hover className="container-table">
         <thead>
           <tr>
             <th>
@@ -131,9 +149,9 @@ function OrderCategory() {
                 />
               </td>
               <td>{item.ingredient}</td>
-              <td>{item.stock}</td>
+              <td>{item.stock} kg</td>
               <td>{item.distributor}</td>
-              <td>{item.Amount}</td>
+              <td>{item.Amount} kg</td>
             </tr>
           ))}
         </tbody>
@@ -144,6 +162,9 @@ function OrderCategory() {
       <Button variant="success" className="m-2 button-green" onClick={handleOrderClick}>
         Order
       </Button>
+      {orderStatus === 'processing' && <div><Spinner animation="border" /></div>}
+          {orderStatus === 'completed' && <p>Order successfully placed</p>}
+      </>)}
     </Container>
   );
 }

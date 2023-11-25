@@ -38,13 +38,13 @@ function Carousel_comp() {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       
       <Carousel.Item>
-        <CarouselItem img="https://img.freepik.com/free-vector/fast-food-restaurant-interior-burger-pizza-donut-drink-tray-cafe-vector-cartoon-illustration-empty-fastfood-canteen-with-counter-menu-tables-chairs_107791-8885.jpg?w=2000" categoria = "Home Burgers" />
+        <CarouselItem img="https://redangus.ro/wp-content/uploads/2015/10/burgers-menu-top-bg1.jpg" categoria = "Angus SteakHouse" />
       </Carousel.Item>  
       <Carousel.Item>
-        <CarouselItem img="https://img.freepik.com/free-vector/fast-food-restaurant-interior-burger-pizza-donut-drink-tray-cafe-vector-cartoon-illustration-empty-fastfood-canteen-with-counter-menu-tables-chairs_107791-8885.jpg?w=2000" categoria = "Capital Burgers" />
+        <CarouselItem img="https://www.restaurantelsporxos.com/img/slideshow/segunda.jpg" categoria = "Frenessí" />
       </Carousel.Item>  
       <Carousel.Item>
-        <CarouselItem img="https://img.freepik.com/free-vector/fast-food-restaurant-interior-burger-pizza-donut-drink-tray-cafe-vector-cartoon-illustration-empty-fastfood-canteen-with-counter-menu-tables-chairs_107791-8885.jpg?w=2000" categoria = "Home Pizza" />
+        <CarouselItem img="https://redbakery.cl/wp-content/uploads/2022/05/308-2.jpg" categoria = "La Focaccia" />
       </Carousel.Item>
     </Carousel>
   );
